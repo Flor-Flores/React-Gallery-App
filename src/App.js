@@ -28,8 +28,8 @@ class App extends Component {
     let search3 = "cat";
 
     let urlSearch1 = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${search1}&per_page=12&format=json&nojsoncallback=1`;
-    let urlSearch2 = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${search1}&per_page=12&format=json&nojsoncallback=1`;
-    let urlSearch3 = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${search1}&per_page=12&format=json&nojsoncallback=1`;
+    let urlSearch2 = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${search2}&per_page=12&format=json&nojsoncallback=1`;
+    let urlSearch3 = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${search3}&per_page=12&format=json&nojsoncallback=1`;
     const requestOne = axios.get(urlSearch1);
     const requestTwo = axios.get(urlSearch2);
     const requestThree = axios.get(urlSearch3);
