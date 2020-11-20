@@ -6,21 +6,29 @@ export default class SearchForm extends Component {
     searchText: ''
   }
   
-  // onSearchChange = e => {
-  //   this.setState({ searchText: e.target.value });
-  // }
+  onSearchChange = e => {
+    this.setState({ searchText: e.target.value });
+  }
   
-  // handleSubmit = e => {
-  //   e.preventDefault();
-  //   this.props.onSearch(this.queryInput.value);
-  //   e.currentTarget.reset();
+  handleSubmit = e => {
+    e.preventDefault();
+    this.props.onSearch(this.query.value);
+    let path = `/search/${this.query.value}`;
+    this.props.info.history.push(path);
+    e.currentTarget.reset();
 
-  // }
+
+  }
   
   render() {  
     return (
-      <form className="search-form">
-        <input type="search" name="search" placeholder="Search" required />
+      <form className="search-form" onSubmit={this.handleSubmit} >
+        <input type="search"
+         name="search" 
+         placeholder="Search" 
+         onChange={this.onSearchChange}
+         ref={ (input) => this.query = input }
+         required />
         <button type="submit" className="search-button">
           <svg
             fill="#fff"
@@ -37,3 +45,4 @@ export default class SearchForm extends Component {
     );
   }
 }
+
