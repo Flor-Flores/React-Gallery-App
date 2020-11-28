@@ -2,6 +2,7 @@ body {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   color: #3f4850;
+  background-color: lavender;
 }
 
 h2 {
@@ -48,6 +49,7 @@ input {
 .main-nav li {
   width: 100%;
   margin-bottom: 1em;
+
 }
 
 .main-nav a {
@@ -56,6 +58,7 @@ input {
   border-radius: 3px;
   padding: 5px;
   color: #fff;
+  
 }
 
 .main-nav .active,
@@ -84,10 +87,28 @@ input {
   transform: scale(1.25);
   transition: transform 1.25s;
 }
+.photo-caption {
+  position: relative;
+  top: 2.5em;
+  z-index: 3;
+  transition:  1.25s;
+
+}
+
+li:hover .photo-caption {
+  top: -3em;
+  z-index: 3;
+  background-color: plum;
+  transition:  1.25s;
+  padding: .2em;
+
+}
+
 
 .photo-container li:hover img {
   transform: scale(1.65);
 }
+
 
 .photo-container .not-found {
   width: 100%;

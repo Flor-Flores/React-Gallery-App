@@ -3,11 +3,7 @@ import SearchForm from './SearchForm';
 import Nav from './Nav';
 
 export default class Header extends Component {
-  
-  componentDidMount() {
-    }
     
-
   render() {  
     return (
       <React.Fragment>
