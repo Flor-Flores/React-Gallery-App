@@ -74,6 +74,7 @@ class App extends Component {
       <Router >
         <div className="container">
           <Route   path="/" render={(props) => <Header {...props}  getPhotos={this.performSearch}  />} />
+          <Redirect  from="/" to="/search/random" />
 
           <Switch>
             <Route  path="/search/cats" render={ () =>  <PhotoList title={"Cats"}  data={this.state.catPhotos} />} />            
